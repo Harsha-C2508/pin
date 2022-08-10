@@ -26,19 +26,19 @@ const Pin = ({length,setOtp}) => {
     }
 
     const PasteContent=(e)=>{
-        // const data = e.clipboardData
-        //        .getData("text")
-        //        .split("")
-        //        .filter((_,index)=>index < length);
+        const data = e.clipboardData
+               .getData("text")
+               .split("")
+               .filter((_,index)=>index < length);
 
-        // data.forEach((item,index)=>{
-        //     inputData[index] = item;
+        data.forEach((item,index)=>{
+            inputData[index] = item;
 
-        //     inputRef.current[index].value = item;
-        //     if(index < length-1){
-        //         inputRef.current[index + 1].focus();
-        //     }
-        // })
+            inputRef.current[index].value = item;
+            if(index < length-1){
+                inputRef.current[index + 1].focus();
+            }
+        })
 
         console.log("paste the data",e.clipboardData.getData("text"));
     }
