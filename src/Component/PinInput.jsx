@@ -13,7 +13,7 @@ const PinInput = forwardRef(({singleInput,BackSpace},ref) => {
     <div>
          <input 
                 ref={ref}
-                maxLength={1}
+                maxLength={4}
                 onKeyUp={handleKeyUp}
                 // onChange ={(e)=>singleInput(e)}
             />
